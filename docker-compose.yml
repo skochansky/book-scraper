@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  book-scraper:
+    build: .
+    hostname: book-scraper
+    environment:
+      FLASK_APP: book_scraper
+      FLASK_DEBUG: 0
+      PYTHONUNBUFFERED: 1
+    entrypoint:
+      - flask
+      - run
+      - --host=0.0.0.0
+    ports:
+      - "5000:5000"
+    volumes: [ ".:/app" ]
+
+

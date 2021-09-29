@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block head %}{% endblock %}
+{% block content %}
+    <div class="container">
+        <div>
+            <form action ="#" method="POST">
+                <div class="form-group mb-3" style="border-style: none;transform: translate(0px);filter: saturate(0%);">
+                    <div id="formdiv">
+                        <div class="row" style="margin-right:0;margin-left:0;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Book URL</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1">
+                                {{form.book_url(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Number of Pages</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1">
+                                {{form.number_of_pages(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right: 0px;margin-left: 0px;padding-top: 24px;border-style: none;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Cookie</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1">
+                                {{form.cookie(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right: 0px;margin-left: 0px;padding-top: 24px;border-style: none;">
+                            <div class="col-md-8 offset-md-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Referer</strong></p>
+                            </div>
+                            <div class="col-md-10 offset-md-1">
+                                {{form.refer(class="form-control")}}
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-12 col-md-4 offset-md-4" style="text-align:center">
+                                {{form.send(class='btn btn-light btn-lg')}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

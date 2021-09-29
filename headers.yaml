@@ -1,0 +1,17 @@
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,ja-JP;q=0.7,ja;q=0.6,pl;q=0.5
+Connection: keep-alive
+Cookie: Apache=361e4791.5c898534c660d; _ga=GA1.2.846913163.1627931426; Apache=185.129.114.194.1630694419782452;
+  _gid=GA1.2.1229856109.1635722110; _gcl_au=1.1.462960876.1635722110; _gat=1; biblio=d27009f747fdd6e6c36b884262596f511acf19c8;
+  sf_frontend=tughpf7vuuumtvceak09u7b246
+Host: biblio.ebookpoint.pl
+Referer: https://biblio.ebookpoint.pl/153901/zaawansowany-python-jasne-zwiezle-i-efektywne-programowanie-luciano-ramalho/czytaj-pozycje.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+  Gecko) Chrome/93.0.4577.63 Safari/537.36
+sec-ch-ua: '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"'
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: Windows

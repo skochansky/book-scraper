@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title> {% block title %} {% endblock %}</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap/css/bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/font-awesome.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/ionicons.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Form.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Login-Form-Dark.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Navigation-with-Search.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form-1.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/styles.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Highlight-Clean.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <script type ="text/javascript" src="{{ url_for('static',filename='styles/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+        <div class="container"><a class="btn btn-light action-button" href="#" style="background: rgb(13, 22, 49);">Book Downloader</a>
+
+                <a class="btn btn-light action-button" style="background: rgb(13, 22, 49); margin-left: auto; ">You are logged as: {{ nickname }}</a>
+                <a class="btn btn-light action-button" role="button" href="{{ url_for('app_server.logout')}}" style="background: rgb(13, 22, 49);">Logout</a>
+            </div>
+
+    </nav>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+     <div id="successMessage" class="alert alert-{{ category }}" role="alert" style="text-align: center;">
+     <script type="text/javascript">window.setTimeout("document.getElementById('successMessage').style.display='none';", 5000); </script>
+      <strong>{{ message}}</strong>
+</div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+    {% block content %} {% endblock %}
+</body>
+</html>
