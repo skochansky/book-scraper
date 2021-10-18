@@ -9,10 +9,6 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/styles.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/ionicons.min.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap/css/bootstrap.min.css') }}">
-<!--    <link rel="stylesheet" href="../static/styles/bootstrap/css/bootstrap.min.css">-->
-<!--    <link rel="stylesheet" href="../static/styles/fonts/ionicons.min.css">-->
-<!--    <link rel="stylesheet" href="../static/styles/css/Login-Form-Dark.css">-->
-<!--    <link rel="stylesheet" href="../static/styles/css/styles.css">-->
 </head>
 
 <body>
@@ -20,10 +16,10 @@
         <form method="POST">
             <h2 class="visually-hidden">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Login"></div>
+            <div class="mb-3"><input class="form-control" type="text" name="nickname" placeholder="Login"></div>
             <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
             <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">Log In
-            </button></div><a class="forgot" href="#">Forgot your email or password?</a>
+            </button></div><a class="forgot" href="#">Forgot your email or a password?</a>
         </form>
     </section>
     <script src="../static/styles/bootstrap/js/bootstrap.min.js"></script>
