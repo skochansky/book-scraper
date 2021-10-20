@@ -6,6 +6,10 @@ from flask import render_template, redirect, request, url_for, send_file, \
 from . import SERVER_BLUEPRINT
 from ..services.helpers import convert_url, pass_headers_information, \
     extract_book_name, download_pdf
+from .forms import LoginForm
+
+# Const
+RESOLUTION = 1300
 
 
 @SERVER_BLUEPRINT.route("/test", methods=["GET", "POST"])
@@ -15,11 +19,12 @@ def index():
 
 @SERVER_BLUEPRINT.route("/", methods=["GET", "POST"])
 def login():
+    form = LoginForm()
     if request.method == "POST":  ### 1
         session.permanent = True
         session.update({"nick": request.form['nickname']})
     elif request.method == "GET" and "nick" not in session:
-        return render_template("login.html")
+        return render_template("login.html", form=form)
     return redirect(url_for("app_server.dashboard"))
 
 
@@ -35,7 +40,7 @@ def dashboard():
         book_url: str = request.form['book_url']
         # file_name: str = request.form['file_name']
         session['number_of_pages']: int = int(request.form['number_of_pages'])
-        resolution: int = int(request.form['page_quality'])
+        session['book_name']: str = extract_book_name(book_url)
 
         # TODO CREATE VIA PARAMTERS
         pass_headers_information('Referer', "Cookie")

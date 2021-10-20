@@ -1,43 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap/css/bootstrap.min.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/font-awesome.min.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/ionicons.min.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Form.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Login-Form-Dark.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Navigation-with-Search.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form-1.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form.css') }}">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/styles.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
-
-</head>
-
-<body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
-        <div class="container"><a class="btn btn-light action-button" href="#">Book Downloader</a><button
-                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="btn btn-light action-button" href="#">Link 1</a></li>
-                    <li class="nav-item"><a class="btn btn-light action-button" href="#">Link 2</a></li>
-                    <li class="nav-item"><a class="btn btn-light action-button" href="#">Link 3</a></li>
-                </ul>
-                <form class="me-auto search-form" target="_self">
-
-
-                </form>
-                <a class="btn btn-light action-button" role="text" style="background: rgb(13, 22, 49);">You are logged as: {{ nickname }}</a>
-                <a class="btn btn-light action-button" role="button" href="{{ url_for('app_server.logout')}}" style="background: rgb(13, 22, 49);">Logout</a>
-            </div>
-        </div>
-    </nav>
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block head %}{% endblock %}
+{% block content %}
     <div class="container">
         <div>
             <form action ="#" method="POST">
@@ -51,21 +15,9 @@
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-md-8 offset-md-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>File Name</strong></p>
-                            </div>
-                            <div class="col-md-10 offset-md-1"><input class="form-control" type="text" style="margin-left:0px;font-family:Roboto, sans-serif;" name="file_name" placeholder=""></div>
-                        </div>
-                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
-                            <div class="col-md-8 offset-md-1">
                                 <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Number of Pages</strong></p>
                             </div>
                             <div class="col-md-10 offset-md-1"><input class="form-control" type="number" style="margin-left:0px;font-family:Roboto, sans-serif;" name="number_of_pages" placeholder=""></div>
-                        </div>
-                        <div class="row" style="margin-right: 0px;margin-left: 0px;padding-top: 24px;border-style: none;">
-                            <div class="col-md-8 offset-md-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Resolution 100-2000</strong></p>
-                            </div>
-                            <div class="col-md-10 offset-md-1"><input class="form-control" type="number" style="margin-left:0px;font-family:Roboto, sans-serif;" name="page_quality" placeholder=""></div>
                         </div>
                         <div class="row" style="margin-right: 0px;margin-left: 0px;padding-top: 24px;border-style: none;">
                             <div class="col-md-8 offset-md-1">
@@ -81,7 +33,6 @@
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-12 col-md-4 offset-md-4">
-<!--                                <button class="btn btn-light btn-lg" style="font-family:Roboto, sans-serif;" type="reset">Clear </button>-->
                                 <button class="btn btn-light btn-lg" style="margin-left:30%;" type="submit">Submit </button></div>
                         </div>
                     </div>
@@ -89,11 +40,4 @@
             </form>
         </div>
     </div>
-    <div class="container">
-        <div></div>
-    </div>
-    <section></section>
-    <script src="../../../../Desktop/export%20bootstrap/assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock %}

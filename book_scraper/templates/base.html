@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title> {% block title %} {% endblock %}</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap/css/bootstrap.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/font-awesome.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/fonts/ionicons.min.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Form.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Login-Form-Dark.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Navigation-with-Search.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form-1.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Responsive-Form.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/styles.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/Highlight-Clean.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"><script type ="text/javascript" src="{{ url_for('static',filename='styles/bootstrap/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+        <div class="container"><a class="btn btn-light action-button" href="#" style="background: rgb(13, 22, 49);">Book Downloader</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="btn btn-light action-button" href="#" style="background: rgb(13, 22, 49);">Link 1</a></li>
+                    <li class="nav-item"><a class="btn btn-light action-button" href="#" style="background: rgb(13, 22, 49);">Link 2</a></li>
+                    <li class="nav-item"><a class="btn btn-light action-button" href="#" style="background: rgb(13, 22, 49);">Link 3</a></li>
+                </ul>
+                <form class="me-auto search-form" target="_self">
+                </form>
+                <a class="btn btn-light action-button" role="text" style="background: rgb(13, 22, 49);">You are logged as: {{ nickname }}</a>
+                <a class="btn btn-light action-button" role="button" href="{{ url_for('app_server.logout')}}" style="background: rgb(13, 22, 49);">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+</body>
+</html>

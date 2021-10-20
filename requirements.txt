@@ -26,3 +26,5 @@ tqdm==4.62.3
 Werkzeug==2.0.1
 requests
 fpdf
+WTForms==2.3.3
+flask-wtf==0.15.1
